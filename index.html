@@ -11,10 +11,10 @@
             margin: 0;
             padding: 0;
         }
-        .Belinha{
+
+        .Belinha {
             text-align: center;
             font-size: 3em;
-            
         }
 
         table {
@@ -55,15 +55,13 @@
 
         ul li {
             margin-bottom: 5px;
+            cursor: pointer; /* Adicionado para indicar que o elemento é clicável */
         }
 
-        a {
-            color: #3498db;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
+        img {
+            max-width: 100%;
+            height: auto;
+            display: none; /* Inicialmente, os GIFs estão ocultos */
         }
     </style>
 </head>
@@ -83,63 +81,31 @@
         <tbody>
             <tr>
                 <td>Segunda-feira</td>
-                <td>Membros Inferiores</td>
                 <td>
+                    <p>Membros Inferiores</p>
                     <ul>
-                        <li><a href="C:\Users\marcelo\Desktop\prototipo-app\treino-jenny\exercicio.html" target="_blank">Agachamento Livre</a> - 3x10-12</li>
-                        <li><a href="https://www.youtube.com/shorts/hxv-ZCGGsl0" target="_blank">Agachamento Livre</a> - 3x10-12</li>
-                        <li><a href="https://www.youtube.com/shorts/IEB8cd1BfQU" target="_blank">Lunges</a> - 3x12 cada perna</li>
-                        <li><a href="https://www.youtube.com/shorts/JGmm-ayp79A">Cadeira Extensora</a> - 3x12-15</li>
-                        <li><a href="https://www.youtube.com/shorts/p3ZS0OskwTM">Flexão de Joelhos</a> - 3x12-15</li>
-                        <li><a href="https://www.youtube.com/shorts/X9MYV0P3rRw">Panturrilha em Pé</a> - 3x15-20</li>
-                        <li><a href="https://www.youtube.com/shorts/jZY0XzzXleI">Prancha</a> - 3x30-60s</li>
+                        <li onclick="toggleGif('gif1')">Agachamento Livre - 3x10-12</li><br>
+                        <hr>
+                        <br>
+                        <li onclick="toggleGif('gif2')">Lunges - 3x12 cada perna</li>
                     </ul>
                 </td>
-            </tr>
-            <tr>
-                <td>Quarta-feira</td>
-                <td>Membros Inferiores</td>
                 <td>
-                    <ul>
-                        <li><a href="https://www.youtube.com/shorts/Nf9O-pEl1ok">Levantamento Terra</a> - 3x8-10</li>
-                        <li><a href="#">Passadas com Barra</a> - 3x12 cada perna</li>
-                        <li><a href="#">Glúteos na Máquina</a> - 3x12-15</li>
-                        <li><a href="#">Flexão de Pernas</a> - 3x12-15</li>
-                        <li><a href="#">Panturrilha Sentada</a> - 3x15-20</li>
-                        <li><a href="#">Abdominais</a> - 3x15-20</li>
-                    </ul>
+                    <img id="gif1" src="../imagens/agachamento-com-barra.webp" alt="Agachamento Livre">
+                    <img id="gif2" src="../imagens/0d729a0461cc2548_SplitLunge.gif" alt="Lunges">
+                    <!-- Adicione mais elementos img para outros exercícios -->
                 </td>
             </tr>
-            <tr>
-                <td>Sexta-feira</td>
-                <td>Membros Superiores</td>
-                <td>
-                    <ul>
-                        <li><a href="#">Supino</a> - 3x8-10</li>
-                        <li><a href="#">Remada com Barra</a> - 3x10-12</li>
-                        <li><a href="#">Desenvolvimento com Halteres</a> - 3x10-12</li>
-                        <li><a href="#">Rosca Direta</a> - 3x12-15</li>
-                        <li><a href="#">Tríceps Pulley</a> - 3x12-15</li>
-                        <li><a href="#">Prancha</a> - 3x30-60s</li>
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <td>Sábado</td>
-                <td>Membros Inferiores</td>
-                <td>
-                    <ul>
-                        <li><a href="#">Agachamento Livre</a> - 3x10-12</li>
-                        <li><a href="#">Lunges</a> - 3x12 cada perna</li>
-                        <li><a href="#">Cadeira Extensora</a> - 3x12-15</li>
-                        <li><a href="#">Flexão de Joelhos</a> - 3x12-15</li>
-                        <li><a href="#">Panturrilha em Pé</a> - 3x15-20</li>
-                        <li><a href="#">Abdominais</a> - 3x15-20</li>
-                    </ul>
-                </td>
-            </tr>
+            <!-- Adicione mais linhas para outros dias -->
         </tbody>
     </table>
+
+    <script>
+        function toggleGif(gifId) {
+            const gif = document.getElementById(gifId);
+            gif.style.display = (gif.style.display === 'none') ? 'block' : 'none';
+        }
+    </script>
 
 </body>
 </html>
