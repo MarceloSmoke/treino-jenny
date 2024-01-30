@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,177 +20,200 @@
             width: 80%;
         }
 
-        .Belinha {
-            text-align: center;
-            font-size: 2em;
-            margin-bottom: 20px;
+        .day {
+            margin-bottom: 30px;
         }
 
-        table {
-            width: 100%;
+        .dayTitle {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
             margin: 20px 0;
-            border-collapse: collapse;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            background-color: #fff;
         }
 
-        th, td {
-            padding: 15px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-
-        th {
-            background-color: #4CAF50;
-            color: white;
-        }
-
-        tr:hover {
-            background-color: #f5f5f5;
-        }
-
-        h2 {
-            text-align: center;
-            color: #333;
-            margin-top: 50px;
-        }
-
-        ul {
-            margin: 0;
-            padding: 0;
-            list-style-type: none;
-        }
-
-        ul li {
+        .exerciseItem {
             margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .exerciseName {
+            font-size: 18px;
+            font-weight: bold;
+            color: #3498db;
             cursor: pointer;
         }
 
-        strong {
-            font-weight: bold;
-        }
-
-        img {
-            max-width: 100%;
+        .gif {
+            width: 100%;
             height: auto;
             display: none;
+            margin-top: 10px;
+        }
+
+        .closeButton {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            color: #e74c3c;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h2>Plano de Treino Semanal</h2>
-        <p class="Belinha"><mark>Jeniffer</mark></p>
 
-        <table>
-            <thead>
-                <tr>
-                    <th>Dia</th>
-                    <th>Treino</th>
-                    <th>Série/Repetições</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Segunda-feira</td>
-                    <td>
-                        <p><strong>Membros Inferiores</strong></p>
-                        <ul>
-                            <li onclick="toggleGif('gif1')">Agachamento Livre - 3x10-12</li>
-                            <li onclick="toggleGif('gif2')">Lunges - 3x12 cada perna</li>
-                            <li onclick="toggleGif('gif3')">Cadeira Extensora - 3x12-15</li>
-                            <li onclick="toggleGif('gif4')">Flexão de Joelhos - 3x12-15</li>
-                            <li onclick="toggleGif('gif5')">Panturrilha em Pé - 3x15-20</li>
-                            <li onclick="toggleGif('gif6')">Prancha - 3x30-60s</li>
-                        </ul>
-                    </td>
-                    <td>
-                        <img id="gif1" src="imagens/agachamento-com-barra.webp" alt="Agachamento Livre">
-                        <img id="gif2" src="imagens/0d729a0461cc2548_SplitLunge.gif" alt="Lunges">
-                        <img id="gif3" src="imagens/cadeira-extensora.gif" alt="Cadeira Extensora">
-                        <img id="gif4" src="imagens/flexao-de-joelhos.gif" alt="Flexão de Joelhos">
-                        <img id="gif5" src="imagens/panturrilha-em-pe.gif" alt="Panturrilha em Pé">
-                        <img id="gif6" src="imagens/prancha.gif" alt="Prancha">
-                    </td>
-                </tr>
-                <tr>
-                    <td>Quarta-feira</td>
-                    <td>
-                        <p><strong>Membros Inferiores</strong></p>
-                        <ul>
-                            <li onclick="toggleGif('gif7')">Levantamento Terra - 3x8-10</li>
-                            <li onclick="toggleGif('gif8')">Passadas com Barra - 3x12 cada perna</li>
-                            <li onclick="toggleGif('gif9')">Glúteos na Máquina - 3x12-15</li>
-                            <li onclick="toggleGif('gif10')">Flexão de Pernas - 3x12-15</li>
-                            <li onclick="toggleGif('gif11')">Panturrilha Sentada - 3x15-20</li>
-                            <li onclick="toggleGif('gif12')">Abdominais - 3x15-20</li>
-                        </ul>
-                    </td>
-                    <td>
-                        <img id="gif7" src="imagens/levantamento-terra.gif" alt="Levantamento Terra">
-                        <img id="gif8" src="imagens/passadas-com-barra.gif" alt="Passadas com Barra">
-                        <img id="gif9" src="imagens/gluteos-na-maquina.gif" alt="Glúteos na Máquina">
-                        <img id="gif10" src="imagens/flexao-de-pernas.gif" alt="Flexão de Pernas">
-                        <img id="gif11" src="imagens/panturrilha-sentada.gif" alt="Panturrilha Sentada">
-                        <img id="gif12" src="imagens/abdominais.gif" alt="Abdominais">
-                    </td>
-                </tr>
-                <tr>
-                    <td>Sexta-feira</td>
-                    <td>
-                        <p><strong>Membros Superiores</strong></p>
-                        <ul>
-                            <li onclick="toggleGif('gif13')">Supino - 3x8-10</li>
-                            <li onclick="toggleGif('gif14')">Remada com Barra - 3x10-12</li>
-                            <li onclick="toggleGif('gif15')">Desenvolvimento com Halteres - 3x10-12</li>
-                            <li onclick="toggleGif('gif16')">Rosca Direta - 3x12-15</li>
-                            <li onclick="toggleGif('gif17')">Tríceps Pulley - 3x12-15</li>
-                            <li onclick="toggleGif('gif18')">Prancha - 3x30-60s</li>
-                        </ul>
-                    </td>
-                    <td>
-                        <img id="gif13" src="imagens/supino.gif" alt="Supino">
-                        <img id="gif14" src="imagens/remada-com-barra.gif" alt="Remada com Barra">
-                        <img id="gif15" src="imagens/desenvolvimento-com-halteres.gif" alt="Desenvolvimento com Halteres">
-                        <img id="gif16" src="imagens/rosca-direta.gif" alt="Rosca Direta">
-                        <img id="gif17" src="imagens/triceps-pulley.gif" alt="Tríceps Pulley">
-                        <img id="gif18" src="imagens/prancha.gif" alt="Prancha">
-                    </td>
-                </tr>
-                <tr>
-                    <td>Sábado</td>
-                    <td>
-                        <p><strong>Membros Inferiores</strong></p>
-                        <ul>
-                            <li onclick="toggleGif('gif19')">Agachamento Livre - 3x10-12</li>
-                            <li onclick="toggleGif('gif20')">Lunges - 3x12 cada perna</li>
-                            <li onclick="toggleGif('gif21')">Cadeira Extensora - 3x12-15</li>
-                            <li onclick="toggleGif('gif22')">Flexão de Joelhos - 3x12-15</li>
-                            <li onclick="toggleGif('gif23')">Panturrilha em Pé - 3x15-20</li>
-                            <li onclick="toggleGif('gif24')">Abdominais - 3x15-20</li>
-                        </ul>
-                    </td>
-                    <td>
-                        <img id="gif19" src="imagens/agachamento-com-barra.webp" alt="Agachamento Livre">
-                        <img id="gif20" src="imagens/0d729a0461cc2548_SplitLunge.gif" alt="Lunges">
-                        <img id="gif21" src="imagens/cadeira-extensora.gif" alt="Cadeira Extensora">
-                        <img id="gif22" src="imagens/flexao-de-joelhos.gif" alt="Flexão de Joelhos">
-                        <img id="gif23" src="imagens/panturrilha-em-pe.gif" alt="Panturrilha em Pé">
-                        <img id="gif24" src="imagens/abdominais.gif" alt="Abdominais">
-                    </td>
-                </tr>
-                <!-- Adicione mais linhas para outros dias ou exercícios -->
-            </tbody>
-        </table>
+        <div id="segunda" class="day">
+            <h2 class="dayTitle">Segunda-feira</h2>
+            <div class="exerciseItem">
+                <p class="exerciseName" onclick="toggleGif('segunda_gif1')">Agachamento Livre - 3x10-12</p>
+                <img id="segunda_gif1" class="gif" src="treino-jenny/imagens/agachamento-com-barra.webp" alt="Agachamento Livre">
+                <span class="closeButton" onclick="closeGif('segunda_gif1')">Fechar</span>
+            </div>
+            <div class="exerciseItem">
+                <p class="exerciseName" onclick="toggleGif('segunda_gif2')">Lunges - 3x12 cada perna</p>
+                <img id="segunda_gif2" class="gif" src="treino-jenny/imagens/0d729a0461cc2548_SplitLunge.gif" alt="Lunges">
+                <span class="closeButton" onclick="closeGif('segunda_gif2')">Fechar</span>
+            </div>
+            <div class="exerciseItem">
+                <p class="exerciseName" onclick="toggleGif('segunda_gif3')">Cadeira Extensora - 3x12-15</p>
+                <img id="segunda_gif3" class="gif" src="imagens/cadeira-extensora.gif" alt="Cadeira Extensora">
+                <span class="closeButton" onclick="closeGif('segunda_gif3')">Fechar</span>
+            </div>
+            <div class="exerciseItem">
+                <p class="exerciseName" onclick="toggleGif('segunda_gif4')">Flexão de Joelhos - 3x12-15</p>
+                <img id="segunda_gif4" class="gif" src="imagens/flexao-de-joelhos.gif" alt="Flexão de Joelhos">
+                <span class="closeButton" onclick="closeGif('segunda_gif4')">Fechar</span>
+            </div>
+            <div class="exerciseItem">
+                <p class="exerciseName" onclick="toggleGif('segunda_gif5')">Panturrilha em Pé - 3x15-20</p>
+                <img id="segunda_gif5" class="gif" src="imagens/panturrilha-em-pe.gif" alt="Panturrilha em Pé">
+                <span class="closeButton" onclick="closeGif('segunda_gif5')">Fechar</span>
+            </div>
+            <div class="exerciseItem">
+                <p class="exerciseName" onclick="toggleGif('segunda_gif6')">Prancha - 3x30-60s</p>
+                <img id="segunda_gif6" class="gif" src="imagens/prancha.gif" alt="Prancha">
+                <span class="closeButton" onclick="closeGif('segunda_gif6')">Fechar</span>
+            </div>
+        </div>
+
+        <div id="quarta" class="day">
+            <h2 class="dayTitle">Quarta-feira</h2>
+            <div class="exerciseItem">
+                <p class="exerciseName" onclick="toggleGif('quarta_gif7')">Levantamento Terra - 3x8-10</p>
+                <img id="quarta_gif7" class="gif" src="imagens/levantamento-terra.gif" alt="Levantamento Terra">
+                <span class="closeButton" onclick="closeGif('quarta_gif7')">Fechar</span>
+            </div>
+            <div class="exerciseItem">
+                <p class="exerciseName" onclick="toggleGif('quarta_gif8')">Passadas com Barra - 3x12 cada perna</p>
+                <img id="quarta_gif8" class="gif" src="imagens/passadas-com-barra.gif" alt="Passadas com Barra">
+                <span class="closeButton" onclick="closeGif('quarta_gif8')">Fechar</span>
+            </div>
+            <div class="exerciseItem">
+                <p class="exerciseName" onclick="toggleGif('quarta_gif9')">Glúteos na Máquina - 3x12-15</p>
+                <img id="quarta_gif9" class="gif" src="imagens/gluteos-na-maquina.gif" alt="Glúteos na Máquina">
+                <span class="closeButton" onclick="closeGif('quarta_gif9')">Fechar</span>
+            </div>
+            <div class="exerciseItem">
+                <p class="exerciseName" onclick="toggleGif('quarta_gif10')">Flexão de Pernas - 3x12-15</p>
+                <img id="quarta_gif10" class="gif" src="imagens/flexao-de-pernas.gif" alt="Flexão de Pernas">
+                <span class="closeButton" onclick="closeGif('quarta_gif10')">Fechar</span>
+            </div>
+            <div class="exerciseItem">
+                <p class="exerciseName" onclick="toggleGif('quarta_gif11')">Panturrilha Sentada - 3x15-20</p>
+                <img id="quarta_gif11" class="gif" src="imagens/panturrilha-sentada.gif" alt="Panturrilha Sentada">
+                <span class="closeButton" onclick="closeGif('quarta_gif11')">Fechar</span>
+            </div>
+            <div class="exerciseItem">
+                <p class="exerciseName" onclick="toggleGif('quarta_gif12')">Abdominais - 3x15-20</p>
+                <img id="quarta_gif12" class="gif" src="imagens/abdominais.gif" alt="Abdominais">
+                <span class="closeButton" onclick="closeGif('quarta_gif12')">Fechar</span>
+            </div>
+        </div>
+
+        <div id="sexta" class="day">
+            <h2 class="dayTitle">Sexta-feira</h2>
+            <div class="exerciseItem">
+                <p class="exerciseName" onclick="toggleGif('sexta_gif13')">Supino - 3x8-10</p>
+                <img id="sexta_gif13" class="gif" src="imagens/supino.gif" alt="Supino">
+                <span class="closeButton" onclick="closeGif('sexta_gif13')">Fechar</span>
+            </div>
+            <div class="exerciseItem">
+                <p class="exerciseName" onclick="toggleGif('sexta_gif14')">Remada com Barra - 3x10-12</p>
+                <img id="sexta_gif14" class="gif" src="imagens/remada-com-barra.gif" alt="Remada com Barra">
+                <span class="closeButton" onclick="closeGif('sexta_gif14')">Fechar</span>
+            </div>
+            <div class="exerciseItem">
+                <p class="exerciseName" onclick="toggleGif('sexta_gif15')">Desenvolvimento com Halteres - 3x10-12</p>
+                <img id="sexta_gif15" class="gif" src="imagens/desenvolvimento-com-halteres.gif" alt="Desenvolvimento com Halteres">
+                <span class="closeButton" onclick="closeGif('sexta_gif15')">Fechar</span>
+            </div>
+            <div class="exerciseItem">
+                <p class="exerciseName" onclick="toggleGif('sexta_gif16')">Rosca Direta - 3x12-15</p>
+                <img id="sexta_gif16" class="gif" src="imagens/rosca-direta.gif" alt="Rosca Direta">
+                <span class="closeButton" onclick="closeGif('sexta_gif16')">Fechar</span>
+            </div>
+            <div class="exerciseItem">
+                <p class="exerciseName" onclick="toggleGif('sexta_gif17')">Tríceps Pulley - 3x12-15</p>
+                <img id="sexta_gif17" class="gif" src="imagens/triceps-pulley.gif" alt="Tríceps Pulley">
+                <span class="closeButton" onclick="closeGif('sexta_gif17')">Fechar</span>
+            </div>
+            <div class="exerciseItem">
+                <p class="exerciseName" onclick="toggleGif('sexta_gif18')">Prancha - 3x30-60s</p>
+                <img id="sexta_gif18" class="gif" src="imagens/prancha.gif" alt="Prancha">
+                <span class="closeButton" onclick="closeGif('sexta_gif18')">Fechar</span>
+            </div>
+        </div>
+
+        <div id="sabado" class="day">
+            <h2 class="dayTitle">Sábado</h2>
+            <div class="exerciseItem">
+                <p class="exerciseName" onclick="toggleGif('sabado_gif19')">Agachamento Livre - 3x10-12</p>
+                <img id="sabado_gif19" class="gif" src="imagens/agachamento-com-barra.webp" alt="Agachamento Livre">
+                <span class="closeButton" onclick="closeGif('sabado_gif19')">Fechar</span>
+            </div>
+            <div class="exerciseItem">
+                <p class="exerciseName" onclick="toggleGif('sabado_gif20')">Lunges - 3x12 cada perna</p>
+                <img id="sabado_gif20" class="gif" src="imagens/0d729a0461cc2548_SplitLunge.gif" alt="Lunges">
+                <span class="closeButton" onclick="closeGif('sabado_gif20')">Fechar</span>
+            </div>
+            <div class="exerciseItem">
+                <p class="exerciseName" onclick="toggleGif('sabado_gif21')">Cadeira Extensora - 3x12-15</p>
+                <img id="sabado_gif21" class="gif" src="imagens/cadeira-extensora.gif" alt="Cadeira Extensora">
+                <span class="closeButton" onclick="closeGif('sabado_gif21')">Fechar</span>
+            </div>
+            <div class="exerciseItem">
+                <p class="exerciseName" onclick="toggleGif('sabado_gif22')">Flexão de Joelhos - 3x12-15</p>
+                <img id="sabado_gif22" class="gif" src="imagens/flexao-de-joelhos.gif" alt="Flexão de Joelhos">
+                <span class="closeButton" onclick="closeGif('sabado_gif22')">Fechar</span>
+            </div>
+            <div class="exerciseItem">
+                <p class="exerciseName" onclick="toggleGif('sabado_gif23')">Panturrilha em Pé - 3x15-20</p>
+                <img id="sabado_gif23" class="gif" src="imagens/panturrilha-em-pe.gif" alt="Panturrilha em Pé">
+                <span class="closeButton" onclick="closeGif('sabado_gif23')">Fechar</span>
+            </div>
+            <div class="exerciseItem">
+                <p class="exerciseName" onclick="toggleGif('sabado_gif24')">Abdominais - 3x15-20</p>
+                <img id="sabado_gif24" class="gif" src="imagens/abdominais.gif" alt="Abdominais">
+                <span class="closeButton" onclick="closeGif('sabado_gif24')">Fechar</span>
+            </div>
+        </div>
     </div>
 
     <script>
         function toggleGif(gifId) {
             const gif = document.getElementById(gifId);
             gif.style.display = (gif.style.display === 'none') ? 'block' : 'none';
+        }
+
+        function closeGif(gifId) {
+            const gif = document.getElementById(gifId);
+            gif.style.display = 'none';
         }
     </script>
 
